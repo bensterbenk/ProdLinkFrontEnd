@@ -1,9 +1,10 @@
 // PostDetailsPage.js
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
-function PostDetailsPage({ match }) {
+function PostDetailsPage() {
     const [post, setPost] = useState(null);
-    const postId = match.params.id;
+    const { postId } = useParams();
 
     useEffect(() => {
         // Fetch a specific post based on post ID
@@ -24,6 +25,7 @@ function PostDetailsPage({ match }) {
             <p>Timestamp: {post.timestamp}</p>
             <p>Body: {post.body}</p>
             <p>Tags: {post.tags.join(', ')}</p>
+            <p>Comments: {post.comments}</p>
             {/* Add more details as needed */}
         </div>
     );

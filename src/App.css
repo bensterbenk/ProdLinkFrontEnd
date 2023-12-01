@@ -1,38 +1,41 @@
-.App {
-  text-align: center;
+/* App.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  background-color: #1b1b1b; /* Black */
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 4s linear;
-  }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.App-header {
-  background-color: rgba(0, 0, 0, 0.33);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+li {
+  display: inline-block;
+  margin-right: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+a {
+  text-decoration: none;
+  color: #00cc66; /* Green */
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a:hover {
+  color: #9933cc; /* Purple */
 }
+
+/* Add this for a smooth transition effect */
+.nav-link-transition {
+  transition: color 0.3s ease-in-out;
+}
+
+/* Add this class to the Link component in your App.js file */

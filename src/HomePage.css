@@ -1,0 +1,55 @@
+/* HomePage.css */
+
+body {
+    font-family: 'Roboto', sans-serif; /* Custom font */
+    background-color: #282c34; /* Dark background color */
+    color: #ffffff; /* Text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #61dafb; /* Light blue color */
+}
+
+.link {
+    display: block;
+    margin: 10px 0;
+    color: #61dafb; /* Light blue color */
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s ease-in-out;
+}
+
+.link:hover {
+    color: #00cc66; /* Green color */
+}
+
+/* Add this for a subtle animation effect */
+.link-animation {
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Add this for icon styling */
+.link i {
+    margin-right: 10px;
+    font-size: 1.2em;
+}

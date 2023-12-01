@@ -1,10 +1,13 @@
 // App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom'; // Update the import for Routes
-import HomePage from './HomePage';  // Update the import path
-import PostListPage from './PostListPage';  // Update the import path
-import CreatePostPage from './CreatePostPage';  // Update the import path
-import PostDetailsPage from './PostDetailsPage';  // Update the import path
+import './App.css';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import RegistrationForm from './RegistrationForm';
+import LoginForm from './LoginForm';
+import HomePage from './HomePage';
+import PostListPage from './PostListPage';
+import CreatePostPage from './CreatePostPage';
+import PostDetailsPage from './PostDetailsPage';
 
 function App() {
   return (
@@ -13,12 +16,20 @@ function App() {
           <nav>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/" className="nav-link-transition">Home</Link>
+              </li>
+              <li>
+                <Link to="/register" className="nav-link-transition">Register</Link>
+              </li>
+              <li>
+                <Link to="/login" className="nav-link-transition">Login</Link>
               </li>
             </ul>
           </nav>
 
           <Routes>
+            <Route path="/register" element={<RegistrationForm />} />
+            <Route path="/login" element={<LoginForm />} />
             <Route path="/posts/:postId" element={<PostDetailsPage />} />
             <Route path="/posts" element={<PostListPage />} />
             <Route path="/create" element={<CreatePostPage />} />
