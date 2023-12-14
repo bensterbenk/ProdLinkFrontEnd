@@ -26,6 +26,12 @@ function PostDetailsPage() {
             <p>Body: {post.body}</p>
             <p>Tags: {post.tags.join(', ')}</p>
             <p>Comments: {post.comments}</p>
+            {/* Audio Player */}
+            {post.audio_file && (
+                <audio controls>
+                    <source src={`http://127.0.0.1:5000/static/audio/${post.audio_file}`} type="audio/mpeg" />
+                </audio>
+            )}
             {/* Add more details as needed */}
         </div>
     );

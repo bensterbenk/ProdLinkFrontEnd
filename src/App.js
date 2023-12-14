@@ -8,6 +8,7 @@ import HomePage from './HomePage';
 import PostListPage from './PostListPage';
 import CreatePostPage from './CreatePostPage';
 import PostDetailsPage from './PostDetailsPage';
+import SamplesForum from "./SamplesForum";
 
 function App() {
   return (
@@ -16,13 +17,13 @@ function App() {
           <nav>
             <ul>
               <li>
-                <Link to="/" className="nav-link-transition">Home</Link>
+                <Link to="/" className="nav-link-transition glow-on-hover">Home</Link>
               </li>
               <li>
-                <Link to="/register" className="nav-link-transition">Register</Link>
+                <Link to="/register" className="nav-link-transition glow-on-hover">Register</Link>
               </li>
               <li>
-                <Link to="/login" className="nav-link-transition">Login</Link>
+                <Link to="/login" className="nav-link-transition glow-on-hover">Login</Link>
               </li>
             </ul>
           </nav>
@@ -33,6 +34,7 @@ function App() {
             <Route path="/posts/:postId" element={<PostDetailsPage />} />
             <Route path="/posts" element={<PostListPage />} />
             <Route path="/create" element={<CreatePostPage />} />
+            <Route path="/samplesforum" element={<SamplesForum />} />
             <Route path="/" element={<HomePage />} />
           </Routes>
         </div>
